@@ -37,7 +37,7 @@ function playRound(humanSelection, computerSelection) {
     }else if (humanSelection === computerSelection) {
         results.textContent = ("Its a draw!");
     } else {
-        results.textContent = ("You Loose! " + computerSelection + " beats " + humanSelection);
+        results.textContent = ("You Lose! " + computerSelection + " beats " + humanSelection);
         computerScore += 1;
     }
 round ++;
