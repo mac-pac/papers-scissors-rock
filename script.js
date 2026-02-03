@@ -47,17 +47,12 @@ function playRound(humanSelection, computerSelection) {
     }
 round ++;
 
-if (round < 5) {
-    updateCounter();
-} else {
-    endGame();
-}
-
-
-}
-
-//playRound(getHumanChoice(), getComputerChoice());
-
+    if (round < 5) {
+        updateCounter();
+    } else {
+        endGame();
+    }
+};
 
 const buttons = document.querySelectorAll("button");
 const results = document.querySelector('#results');
