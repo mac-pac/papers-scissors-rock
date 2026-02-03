@@ -81,7 +81,7 @@ function endGame() {
         result.textContent = "YOU WIN!"
     }
     if (computerScore > humanScore) {
-        result.textContent = "YOU LOOSE!"
+        result.textContent = "YOU LOSE!"
     }
     if (computerScore === humanScore) {
         result.textContent = "IT'S A DRAW!"
