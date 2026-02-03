@@ -1,0 +1,110 @@
+body {
+    background-color: #222831;
+}
+
+h1 {
+    font-family: "Marker Felt", Comic Sans, sans-serif;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 50px;
+    color: #ff5722;
+}
+
+.game {
+    color: #eeeeee;
+    font-family: "Arial Rounded MT Bold", sans-serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 32px;   
+}
+
+.scoreboard {
+    display: flex;
+    justify-content: center;
+}
+
+.score {
+    background-color: #2d4059;
+    align-self: center;
+    width: 300px;
+    height: 150px;
+    margin: 25px;
+}
+
+h2 {
+    font-size: 32px;
+    color: #eeeeee;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+}
+
+.buttons button {
+    width: 250px;
+    height: 150px;
+    margin: 50px;
+    background-color: #eeeeee;
+    color: #222831;
+    border: none;
+    font-family: "Marker Felt", Comic Sans, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+button:hover{
+    color: #ff5722;
+}
+
+#results {
+    color: #eeeeee;
+    font-family: "Arial Rounded MT Bold", sans-serif;
+    font-weight: bold;
+    text-align: center;
+    font-size: 32px;    
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+}
+
+.modal-content {
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 20px;
+    width: 80%; /* Could be more or less, depending on screen size */
+    height: 40%;
+    font-family: "Marker Felt", Comic Sans, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #ff5722;
+}
+
+.modal button {
+    font-family: "Marker Felt", Comic Sans, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    background-color: #eeeeee;
+    border: none;
+    width: 300px;
+    height: 60px;
+}
+
+.footer {
+    color: #eeeeee;
+    font-family: sans-serif;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    opacity: 50%;
+}

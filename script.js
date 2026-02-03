@@ -24,11 +24,6 @@ function getComputerChoice() {
 
 }
 
-function getHumanChoice() {
-    let humanChoice = prompt("Paper, Scissors or Rock?").toLowerCase();
-    return humanChoice;
-}
-
 function playRound(humanSelection, computerSelection) {
     if (humanSelection === "rock" && computerSelection === "scissors") {
         results.textContent = ("You Win! " + humanSelection + " beats " + computerSelection);
@@ -48,19 +43,25 @@ function playRound(humanSelection, computerSelection) {
 round ++;
 
     if (round < 5) {
-        updateCounter();
+        updateScoreboard();
     } else {
         endGame();
     }
 };
 
-const buttons = document.querySelectorAll("button");
+const buttons = document.querySelectorAll(".buttons button");
 const results = document.querySelector('#results');
-const counter = document.querySelector('#counter');
-
-counter.textContent = "Round 1: Human Score 0 | Computer Score 0"
+const roundCounter = document.querySelector('#round');
+const humanScoreBoard = document.querySelector("#humanScore");
+const compScoreBoard = document.querySelector("#compScore");
+const gameBoard = document.querySelector('#gameBoard');
+const result = document.querySelector('#result');
+const gameOverModal = document.querySelector('#gameOverModal');
+const restartBtn = document.querySelector("#restart");
 
 let round = 1;
+updateScoreboard();
+
 
 buttons.forEach((button) => {
     button.addEventListener('click', () => {
@@ -69,23 +70,38 @@ buttons.forEach((button) => {
     });
 });
 
+restartBtn.addEventListener("click", restart);
+
+
 function endGame() {
+    
+    gameOverModal.style.display = "block";
+
     if (humanScore > computerScore) {
-        alert("End of Game - YOU WIN!")
+        result.textContent = "YOU WIN!"
     }
     if (computerScore > humanScore) {
-        alert("End of Game - YOU LOOSE!")
+        result.textContent = "YOU LOOSE!"
     }
     if (computerScore === humanScore) {
-        alert("End of Game - ITS A DRAW!")
+        result.textContent = "IT'S A DRAW!"
     }
+
+}
+
+function updateScoreboard() {
+    roundCounter.textContent = `ROUND: ${round}`;
+    humanScoreBoard.textContent = humanScore;
+    compScoreBoard.textContent = computerScore;
+};
+
+function restart() {
+    
+    gameOverModal.style.display = "none";
+
     round = 1;
     humanScore = 0;
     computerScore = 0;
     results.textContent = '';
-    updateCounter();
+    updateScoreboard();
 }
-
-function updateCounter() {
-    counter.textContent = (`Round ${round} - Human Score: ${humanScore} | Computer Score ${computerScore}`)
-};
